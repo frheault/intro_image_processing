@@ -74,3 +74,14 @@ def summarize_intensities(data):
             round(mean, 3), round(std, 3), \
             round(median, 3), round(iqr, 3), \
             round(max_val, 3), round(min_val, 3)
+
+
+def generate_square(shape, corner, size):
+    data = np.zeros(shape)
+    x_min = int(corner[0])
+    y_min = int(corner[1])
+    x_max = int(x_min + size[0])
+    y_max = int(y_min + size[1])
+    data[x_min:x_max, y_min:y_max] = 1
+
+    return data
